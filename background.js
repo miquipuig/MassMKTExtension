@@ -1,10 +1,10 @@
 chrome.runtime.onInstalled.addListener(async function(details) {
-    await showWhatsappTab();
+    // await showWhatsappTab();
     var notifOptions = {
         type: "basic",
-        iconUrl: "img/icon128.png",
-        title: "WASender Installation Finished.",
-        message: "Click on WA Icon above"
+        iconUrl: "images/128.png",
+        title: "Coarins Extension installation finished",
+        message: "Click on Coarins Extension Icon above"
     };
     chrome.notifications.create(notifOptions, function(notificationID) {
         console.log(notificationID, "notif created", chrome.runtime.lastError)
@@ -49,4 +49,4 @@ chrome.runtime.onMessage.addListener(async function(msg, sender) {
 //             })
 //         }
 //     })
-}
+// }
